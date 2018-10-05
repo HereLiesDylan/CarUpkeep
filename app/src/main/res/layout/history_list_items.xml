@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        tools:text="@string/history_name"
+        android:text="@string/history_name"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_weight="2"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintEnd_toStartOf="@+id/history_list_miles"
+        android:textAlignment="viewStart"
+        android:layout_marginStart="8dp"
+        android:id="@+id/history_list_name"/>
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        tools:text="@string/history_miles"
+        android:text="@string/history_miles"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintEnd_toStartOf="@+id/history_list_maintenance"
+        android:textAlignment="viewStart"
+        android:layout_marginStart="8dp"
+        android:id="@+id/history_list_miles"
+        app:layout_constraintStart_toEndOf="@+id/history_list_name"
+        app:layout_constraintBaseline_toBaselineOf="@+id/history_list_name"/>
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        tools:text="@string/history_maintenance"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintHorizontal_bias="0.5"
+        android:textAlignment="viewStart"
+        android:layout_marginStart="8dp"
+        android:id="@+id/history_list_maintenance"
+        app:layout_constraintStart_toEndOf="@+id/history_list_miles"
+        app:layout_constraintBaseline_toBaselineOf="@+id/history_list_miles"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="4dp"/>
+</android.support.constraint.ConstraintLayout>

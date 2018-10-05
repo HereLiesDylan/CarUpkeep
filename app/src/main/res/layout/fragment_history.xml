@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <TextView
+        android:id="@+id/history_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:padding="4dp"
+        android:text="Vehicle Name"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/history_miles"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintHorizontal_weight="2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/history_miles"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:padding="4dp"
+        android:text="Miles"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/history_name"
+        app:layout_constraintEnd_toStartOf="@+id/history_date"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@+id/history_name" />
+
+    <TextView
+        android:id="@+id/history_date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:padding="4dp"
+        android:text="Date"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/history_miles"
+        app:layout_constraintEnd_toStartOf="@+id/history_maintenance"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@+id/history_miles" />
+
+    <TextView
+        android:id="@+id/history_maintenance"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:layout_marginStart="4dp"
+        android:padding="4dp"
+        android:text="Required Maintenance"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/history_date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_weight="2"
+        app:layout_constraintStart_toEndOf="@+id/history_date" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/history_list"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/history_maintenance"
+        tools:listitem="@layout/history_list_items" />
+</android.support.constraint.ConstraintLayout>

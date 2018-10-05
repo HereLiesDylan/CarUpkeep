@@ -1,0 +1,242 @@
+<resources>
+    <string name="about_copyright">Copyright \u00a9 2018 Dylan Trebilcock</string>
+    <string name="about_email">It is also why your feedback means a lot to us and helps make the app better. If you have any concerns or  ideas for improvement, please email us at d.trebilcock@charter.net</string>
+    <string name="about_us">We have simple mission: To make your everyday life easier. There are a lot of amazing ways software development can make your life easier. From automating task so you can focus on other things, to combining and organizing data for you to get the bottom line details you need when you need them.
+    The possibilities are truly endless. However, companies often focus on trying to create the next big thing rather than simple things that are worth much more.
+    Take CarUpkeep for example. The entire idea is to track your car for you, so you can worry about one less thing. CarUpkeep notifies you when your vehicle is needing
+    maintenance and it is the right maintenance for your specific vehicle per the vehicle manufacturer. You can have some piece of mind knowing you vehicle has the love it needs
+    and you will not get sold maintenance you do not need. All so you can continue your adventure with one less worry. That thought keeps motivated to make this thing better.</string>
+    <string name="addedit_avgdist_hint">Average daily miles</string>
+    <string name="addedit_currentdist_hint">Current miles</string>
+    <string name="addedit_name_hint">Vehicle Name</string>
+    <string name="addVehicle">Add a Vehicle</string>
+    <string name="app_name">CarUpkeep</string>
+    <string name="history_date">Date</string>
+    <string name="history_maintenance">Required Maintenance</string>
+    <string name="history_miles">Miles</string>
+    <string name="history_name">Vehicle Name</string>
+    <string name="MaintenanceChangeOil">Change oil (Be sure to get Synthetic Oil!), Replace Oil filter, and Rotate tires</string>
+    <string name="MaintenanceTesla1">Replace Key Fob battery and Wiper Blades, Rotate Tires, and Perform a Multi-Point Inspection and Wheel Alignment</string>
+    <string name="MaintenanceTesla2">Replace A/C desiccant bag, Brake Fluid, and Cabin Air Filter</string>
+    <string name="MaintenanceTesla3">Replace Battery Coolant</string>
+    <string name="MileageCongrats">Congratulations on 100,000 miles! Keep up the good work!</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="noVehicleAdded">No Vehicle Added</string>
+    <string name="no_vehicle_message">No Vehicles added</string>
+    <string name="saveButton">Save</string>
+    <string name="title_activity_upcoming">UpcomingActivity</string>
+    <string name="title_activity_history">HistoryActivity</string>
+    <string name="upcoming_name">Vehicle Name</string>
+    <string name="upcoming_miles">Miles</string>
+    <string name="upcoming_date">Date</string>
+    <string name="upcoming_maintenance">Required Maintenance</string>
+
+
+    // Start of Year spinner population
+    <string-array name="year">
+        <item>Year</item>
+        <item>2000</item>
+        <item>2001</item>
+        <item>2002</item>
+        <item>2003</item>
+        <item>2004</item>
+        <item>2005</item>
+        <item>2006</item>
+        <item>2007</item>
+        <item>2008</item>
+        <item>2009</item>
+        <item>2010</item>
+        <item>2011</item>
+        <item>2012</item>
+        <item>2013</item>
+        <item>2014</item>
+        <item>2015</item>
+        <item>2016</item>
+        <item>2017</item>
+        <item>2018</item>
+        <item>2019</item>
+    </string-array>
+    // End of Year spinner population
+
+    <string-array name="Makes">// Start of Make spinner population
+        <item>Make</item>
+        <item>Acura</item>
+        <item>Audi</item>
+        <item>BMW</item>
+        <item>Buick</item>
+        <item>Cadillac</item>
+        <item>Oldsmobile</item>
+        <item>Pontiac</item>
+        <item>Saturn</item>
+        <item>Tesla</item>
+    </string-array>
+    // End of Make spinner population
+
+    <string-array name="Acura">// Start of Model spinner population
+        <item>Model</item>
+        <item>CL</item>
+        <item>ILX</item>
+        <item>Integra</item>
+        <item>MDX</item>
+        <item>NSX</item>
+        <item>RDX</item>
+        <item>RL</item>
+        <item>RLX</item>
+        <item>RSX</item>
+        <item>TL</item>
+        <item>TLX</item>
+        <item>TSX</item>
+        <item>ZDX</item>
+    </string-array>
+
+    <string-array name="Audi">
+        <item>Model</item>
+        <item>A3</item>
+        <item>A3 Sportback</item>
+        <item>A4</item>
+        <item>A4 Allroad</item>
+        <item>A5 Sport</item>
+        <item>A6</item>
+        <item>A7</item>
+        <item>A8</item>
+        <item>Allroad</item>
+        <item>Q3</item>
+        <item>Q5</item>
+        <item>Q7</item>
+        <item>R8</item>
+        <item>RS 3</item>
+        <item>RS 5</item>
+        <item>RS 7</item>
+        <item>S3</item>
+        <item>S4</item>
+        <item>S5</item>
+        <item>S6</item>
+        <item>S7</item>
+        <item>S8</item>
+        <item>SQ5</item>
+        <item>TT</item>
+    </string-array>
+
+    <string-array name="BMW">
+        <item>Model</item>
+        <item>1 Series</item>
+        <item>2 Series</item>
+        <item>3 Series</item>
+        <item>4 Series</item>
+        <item>5 Series</item>
+        <item>6 Series</item>
+        <item>7 Series</item>
+        <item>i3</item>
+        <item>i8</item>
+        <item>M</item>
+        <item>M3</item>
+        <item>M4</item>
+        <item>M5</item>
+        <item>M6</item>
+        <item>X1</item>
+        <item>X3</item>
+        <item>X5</item>
+        <item>X5 M</item>
+        <item>X6</item>
+        <item>X6 M</item>
+        <item>Z3</item>
+        <item>Z4</item>
+        <item>Z4 M</item>
+        <item>Z8</item>
+    </string-array>
+
+    <string-array name="Buick">
+        <item>Model</item>
+        <item>Cascada</item>
+        <item>Century</item>
+        <item>Enclave</item>
+        <item>Envision</item>
+        <item>LeCrosse</item>
+        <item>LeSabre</item>
+        <item>Lucerne</item>
+        <item>Park Avenue</item>
+        <item>Rainier</item>
+        <item>Regal</item>
+        <item>Regal TourX</item>
+        <item>Rendezvous</item>
+        <item>Terraza</item>
+        <item>Verano</item>
+    </string-array>
+
+    <string-array name="Cadillac">
+        <item>Model</item>
+        <item>ATS</item>
+        <item>ATS-V</item>
+        <item>Catera</item>
+        <item>CT6</item>
+        <item>CTS</item>
+        <item>CTS-V</item>
+        <item>DTS</item>
+        <item>DeVille</item>
+        <item>Eldorado</item>
+        <item>ELR</item>
+        <item>Escalade</item>
+        <item>Escalade ESV</item>
+        <item>Escalade EXT</item>
+        <item>Seville</item>
+        <item>SRX</item>
+        <item>STS</item>
+        <item>XLR</item>
+        <item>XT4</item>
+        <item>XT5</item>
+        <item>XTS</item>
+    </string-array>
+
+    <string-array name="Oldsmobile">
+        <item>Model</item>
+        <item>Alero</item>
+        <item>Aurora</item>
+        <item>Bravada</item>
+        <item>Intrigue</item>
+        <item>Silhouette</item>
+    </string-array>
+
+    <string-array name="Pontiac">
+        <item>Model</item>
+        <item>Aztek</item>
+        <item>Bonneville</item>
+        <item>Firebird</item>
+        <item>G3</item>
+        <item>G5</item>
+        <item>G6</item>
+        <item>G8</item>
+        <item>Grand Am</item>
+        <item>Grand Prix</item>
+        <item>GTO</item>
+        <item>Montana</item>
+        <item>Montana SV6</item>
+        <item>Solstice</item>
+        <item>Sunfire</item>
+        <item>Torrent</item>
+        <item>Vibe</item>
+    </string-array>
+
+    <string-array name="Saturn">
+        <item>Model</item>
+        <item>Astra</item>
+        <item>Aura</item>
+        <item>L-Series</item>
+        <item>Ion</item>
+        <item>Outlook</item>
+        <item>Relay</item>
+        <item>S-Series</item>
+        <item>Sky</item>
+        <item>Vue</item>
+    </string-array>
+
+    <string-array name="Tesla">
+        <item>Model</item>
+        <item>Model 3</item>
+        <item>Model S</item>
+        <item>Model X</item>
+        <item>Roadster</item>
+    </string-array>
+// End of Model spinner population
+
+</resources>
