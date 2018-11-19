@@ -1,6 +1,5 @@
 # CarUpkeep
-An Android application that tracks your vehicle's mileage and notifies you when you need to perform maintenance and what kind depending on
-the manufacturer of the vehicle. It's designed to help ease the lives of those who already have many other things occupying their attention.
+An Android application that tracks your vehicle's mileage and notifies you when you need to perform maintenance and what kind depending on the manufacturer of the vehicle and it's milage.
 
 # The Motivation behind this
 Well for one, I'm chasing my passion to code. What better way to do that than actually building something with it. Coming from a family that
@@ -35,7 +34,7 @@ Again, the name tells it all. This shows the user what manintenance(s) are comin
 **About Us**
 Unlike the rest of these Activity titles, this one is a little tricky. It tells you a little about Car Upkeep and it's developers(me).
 
-
+![car upkeep - about us](https://user-images.githubusercontent.com/29292953/48691072-cbb41a80-eb96-11e8-8647-aa1621303636.png)
 
 # Credits
 I can't act like I did all of this on my own, so I have to give credit to my team. Big thanks to my wife, who allowed me to skip out on the 
