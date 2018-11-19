@@ -1,14 +1,8 @@
 # CarUpkeep
-An Android application that tracks your vehicle's mileage and notifies you when you need to perform maintenance and what kind depending on the manufacturer of the vehicle and it's milage.
+An Android application that tracks your vehicle's mileage and notifies you when you need to perform maintenance and what type, depending on the manufacturer of the vehicle and it's milage.
 
 # The Motivation behind this
-Well for one, I'm chasing my passion to code. What better way to do that than actually building something with it. Coming from a family that
-worked on cars, I inherited the passion for cars as well. After hearing from both the sides of mechanics and the ones driving the vehicles,
-I learned that people are often too busy to remember what maintenance they need to perform. Which led to Manufacturers telling their employess 
-to relay the message that car owners need to perform extra maintenance that they don't need. Those 2 things are combined in every Manufacturer's
-Owner's Manual in all vehicle's glove boxes. All that was combined into this app. The ease for car owners to have a notification system on
-their phones to tell them when and what to do with their vehicles, which prevents them from spending extra money in maintenance and mechanics
-from having unnecessary work. This win-win is called Car Upkeep.
+Well for one, I'm chasing my passion to code. What better way to do that than actually building something with it. Coming from a family that worked on cars, I inherited the passion for cars as well. After hearing from both the sides of mechanics and the ones driving the vehicles, I learned that people are often too busy to remember what maintenance they need to perform. Which led to Manufacturers telling their employees to relay the message that car owners need to perform extra maintenance that they do not need. Those 2 things are combined in every Manufacturer's Owner's Manual in all vehicle's glove boxes. All of that was combined into this app. The ease for car owners to have a notification system on their phones to tell them when and what to do with their vehicles, which prevents them from spending extra money in maintenance and mechanics from having unnecessary work. This win-win is called Car Upkeep.
 
 # Build Status on this lovely app:
 Never ending because I have way too many ideas for features to add.
@@ -19,7 +13,7 @@ It's a basic blank Activity design with a Navigation drawer that can take you on
 
 ![car upkeep - nav drawer](https://user-images.githubusercontent.com/29292953/48690909-15503580-eb96-11e8-8364-3ae2272f31b2.png)
 
-**Your Gragage** 
+**Your Garage** 
 Which stores up to 3 vehicles in aSQLite database and conveniently lets the user edit or delete as needed.
 
 ![car upkeep - main activity](https://user-images.githubusercontent.com/29292953/48690917-1d0fda00-eb96-11e8-95b6-8e3eaf50d23d.png)
@@ -38,4 +32,4 @@ Unlike the rest of these Activity titles, this one is a little tricky. It tells 
 
 # Credits
 I can't act like I did all of this on my own, so I have to give credit to my team. Big thanks to my wife, who allowed me to skip out on the 
-occassional task because I was (and still are) too focused/excited/frustrated/hard-headed/angry/determined while working on this project.
+occassional task because I was (and still am) too focused/excited/frustrated/hard-headed/angry/determined while working on this project.
