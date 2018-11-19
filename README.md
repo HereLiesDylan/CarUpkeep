@@ -16,19 +16,21 @@ Never ending because I have way too many ideas for features to add.
 
 # Check it Out!
 Like I said, it's a constant work in progress so next time you're here don't be surprised by someting new.
-It's a basic blank Activity design with a Navigation drawer that leads you one of 4 places: 
+It's a basic blank Activity design with a Navigation drawer that can take you one of 4 places: 
+
+![car upkeep - nav drawer](https://user-images.githubusercontent.com/29292953/48690909-15503580-eb96-11e8-8364-3ae2272f31b2.png)
 
 **Your Gragage** 
 Which stores up to 3 vehicles in aSQLite database and conveniently lets the user edit or delete as needed.
 
+![car upkeep - main activity](https://user-images.githubusercontent.com/29292953/48690917-1d0fda00-eb96-11e8-95b6-8e3eaf50d23d.png)
+![car upkeep - add a vehicle](https://user-images.githubusercontent.com/29292953/48690921-200aca80-eb96-11e8-8c26-14c797a9beaf.png)
 
 **History** 
 Pretty self explainatory. It shows you what maintenance has been performed on what vehicle, at how many miles, when.
 
-
 **Upcoming Services**
 Again, the name tells it all. This shows the user what manintenance(s) are coming up on their vehicle(s) and at what milage.
-
 
 **About Us**
 Unlike the rest of these Activity titles, this one is a little tricky. It tells you a little about Car Upkeep and it's developers(me).
