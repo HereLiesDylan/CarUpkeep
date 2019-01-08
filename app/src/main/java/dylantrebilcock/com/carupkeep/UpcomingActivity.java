@@ -23,7 +23,7 @@ public class UpcomingActivity extends AppCompatActivity {
 
         // Create an empty adapter to display the loaded data.
         if (mAdapter == null) {
-            mAdapter = new UpcomingRecyclerViewAdapter( this, null);
+            mAdapter = new UpcomingRecyclerViewAdapter( null);
         }
         recyclerView.setAdapter(mAdapter);
     }

@@ -14,7 +14,7 @@ public class HistoryRecyclerViewAdapter extends RecyclerView.Adapter<HistoryRecy
     private Cursor mCursor;
 
 
-    public HistoryRecyclerViewAdapter(Context context, Cursor cursor) {
+    public HistoryRecyclerViewAdapter(Cursor cursor) {
         this.mCursor = cursor;
     }
 

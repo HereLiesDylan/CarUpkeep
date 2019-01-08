@@ -20,6 +20,7 @@
     <string name="MaintenanceTesla2">Replace A/C desiccant bag, Brake Fluid, and Cabin Air Filter</string>
     <string name="MaintenanceTesla3">Replace Battery Coolant</string>
     <string name="MileageCongrats">Congratulations on 100,000 miles! Keep up the good work!</string>
+    <string name="Miles">Miles</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="noVehicleAdded">No Vehicle Added</string>

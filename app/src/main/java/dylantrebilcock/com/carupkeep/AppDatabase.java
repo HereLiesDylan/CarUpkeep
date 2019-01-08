@@ -10,7 +10,7 @@ class AppDatabase extends SQLiteOpenHelper {
     public static final String DATABASE_NAME = "CarUpkeep.db";
     public static final int DATABASE_VERSION = 3;
 
-    // Implement AppDatabase as a Singleton
+    // Implement AppDatabase as a singleton (guarantee there is only one instance)
     private static AppDatabase instance = null;
 
     private AppDatabase(Context context) {
@@ -43,7 +43,7 @@ class AppDatabase extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 
         // Here to satisfy the angry class implementations
-        // Can be used later to upgrade logic from previous versions to new ones
+        // Can also be used later to upgrade logic from previous versions to new ones
 
     }
 }

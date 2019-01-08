@@ -37,6 +37,7 @@ class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.Vehic
     @Override
     public void onBindViewHolder(VehicleViewHolder holder, int position) {
 
+        // Hides all vehicle_list_items except name to help users see no vehicles have been added yet and so they can't hit inappropriate buttons
         if((mCursor == null) || (mCursor.getCount() == 0)) {
             holder.name.setText(R.string.noVehicleAdded);
             holder.currentMiles.setVisibility(View.GONE);
@@ -47,13 +48,14 @@ class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.Vehic
                 throw new IllegalStateException("Couldn't move cursor to position " + position);
             }
 
+            // A vehicle has been added. Let's show them the info!
             final Vehicle vehicle = new Vehicle(mCursor.getLong(mCursor.getColumnIndex(VehiclesContract.Columns._ID)),
                     mCursor.getString(mCursor.getColumnIndex(VehiclesContract.Columns.VEHICLE_NAME)),
                     mCursor.getInt(mCursor.getColumnIndex(VehiclesContract.Columns.VEHICLE_AVERAGE)),
                     mCursor.getInt(mCursor.getColumnIndex(VehiclesContract.Columns.VEHICLE_CURRENT)));
 
             holder.name.setText(vehicle.getName());
-            holder.currentMiles.setText(Integer.toString(vehicle.getCurrentDist()));
+            holder.currentMiles.setText(vehicle.getCurrentDist());
             holder.editButton.setVisibility(View.VISIBLE);
             holder.deleteButton.setVisibility(View.VISIBLE);
 
@@ -87,7 +89,7 @@ class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.Vehic
     public int getItemCount() {
 
         if((mCursor == null) || (mCursor.getCount() == 0)) {
-            return 1; // A lie, because populates a single ViewHolder with instructions
+            return 1; // This is a lie, because populates a single ViewHolder with instructions
         } else {
             return mCursor.getCount();
         }
@@ -103,10 +105,10 @@ class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.Vehic
         final Cursor oldCursor = mCursor;
         mCursor = newCursor;
         if(newCursor != null) {
-            // notify the observers about the new cursor
+            // Notify about the new cursor
             notifyDataSetChanged();
         } else {
-            // notify the observers about the lack of a data set
+            // Notify about the lack of a data
             notifyItemRangeRemoved(0, numItems);
         }
         return oldCursor;

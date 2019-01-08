@@ -1,6 +1,8 @@
 package dylantrebilcock.com.carupkeep;
 
+import android.content.ContentValues;
 import android.content.Intent;
+import android.database.Cursor;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -16,6 +18,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                                                                 RecyclerViewAdapter.OnVehicleClickListener {
 
     private DrawerLayout drawer;
+    public java.util.Date storedDay;
+    private Cursor mCursor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,18 +38,18 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
-        // Launcher view
+        // Sets view seen on launch
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                     new FragmentMainActivity()).commit();
             navigationView.setCheckedItem(R.id.nav_garage);
         }
-
+        checkDate();
     }
 
 
     @Override
-    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {   // The navigation drawer and what fragments/activity gets opened on click
         switch (item.getItemId()) {
             case R.id.nav_garage:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
@@ -70,7 +74,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     }
 
     @Override
-    public void onBackPressed() {
+    public void onBackPressed() {   // Closes the navigation drawer if the back button is pressed when the drawer is open
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
@@ -79,27 +83,44 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     }
 
     @Override
-    public void onEditClick(@NonNull Vehicle vehicle) {
-        AddEditRequest(vehicle);
+    public void onEditClick(@NonNull Vehicle vehicle) {   // Opens FragmentAddEdit when the user clicks the vList_edit(pencil) button on a specific vehicle.
+        AddEditRequest(vehicle);                          // Passes that vehicle specific vehicle to ensure the right vehicle is edited
     }
 
-    private void AddEditRequest(Vehicle vehicle) {
-        FragmentAddEdit FragmentAddEdit = new FragmentAddEdit();
+    private void AddEditRequest(Vehicle vehicle) {  // Opens FragmentAddEdit when 'Add a vehicle' button is clicked to allow the user to add a vehicle
+        FragmentAddEdit fragmentAddEdit = new FragmentAddEdit();
 
         Bundle arguments = new Bundle();
         arguments.putSerializable(Vehicle.class.getSimpleName(), vehicle);
-        FragmentAddEdit.setArguments(arguments);
+        fragmentAddEdit.setArguments(arguments);
 
         getSupportFragmentManager().beginTransaction()
-                .replace(R.id.fragment_container, FragmentAddEdit)
+                .replace(R.id.fragment_container, fragmentAddEdit)
                 .commit();
-
     }
 
     @Override
-    public void onDeleteClick(@NonNull Vehicle vehicle) {
+    public void onDeleteClick(@NonNull Vehicle vehicle) {   // Deletes a vehicle if delete is pressed
 
         getContentResolver().delete(VehiclesContract.buildVehicleUri(vehicle.getId()), null, null);
     }
+
+
+    public void checkDate() {
+
+        if (mCursor == null) {
+            java.util.Date currentDay = new java.util.Date();
+            ContentValues values = new ContentValues();
+            int mileage = Integer.parseInt(VehiclesContract.Columns.VEHICLE_CURRENT);
+            int dailyDistance = Integer.parseInt(VehiclesContract.Columns.VEHICLE_AVERAGE);
+
+            if (!storedDay.equals(currentDay)) {
+                storedDay = currentDay;
+                mileage += dailyDistance;
+                values.put(VehiclesContract.Columns.VEHICLE_CURRENT, mileage);
+            }
+        }
+    }
+
 
 }

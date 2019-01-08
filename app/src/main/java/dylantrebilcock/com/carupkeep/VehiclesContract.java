@@ -14,7 +14,7 @@ public class VehiclesContract {
 
     static final String TABLE_NAME = "Vehicles";
 
-
+    // Vehicles database fields
     public static class Columns {
         public static final String _ID = BaseColumns._ID;
         public static final String VEHICLE_NAME = "VehicleName";

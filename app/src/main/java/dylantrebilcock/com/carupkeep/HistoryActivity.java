@@ -26,7 +26,7 @@ public class HistoryActivity extends AppCompatActivity {
 
         // Create an empty adapter to display the loaded data.
         if (mAdapter == null) {
-            mAdapter = new HistoryRecyclerViewAdapter(this, null);
+            mAdapter = new HistoryRecyclerViewAdapter(null);
         }
         recyclerView.setAdapter(mAdapter);
     }

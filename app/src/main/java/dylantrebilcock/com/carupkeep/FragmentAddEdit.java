@@ -79,7 +79,6 @@ public class FragmentAddEdit extends Fragment {
         saveButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // Updates the database if at least one thing was changed.
 
                 ContentResolver contentResolver = getActivity().getContentResolver();
                 ContentValues values = new ContentValues();
@@ -87,9 +86,9 @@ public class FragmentAddEdit extends Fragment {
                 switch (mMode) {
                     case EDIT:
                         if (vehicle == null) {
-                            // removes lint warnings, will never execute
+                            // This just removes lint warnings, will never execute
                             break;
-                        }
+                        }   // Bellow checks if anything was changed and if so, updates the db
                         if (!mVehicleName.getText().toString().equals(vehicle.getName())) {
                             values.put(VehiclesContract.Columns.VEHICLE_NAME, mVehicleName.getText().toString());
                         }
@@ -103,12 +102,13 @@ public class FragmentAddEdit extends Fragment {
                             contentResolver.update(VehiclesContract.buildVehicleUri(vehicle.getId()), values, null, null);
                         }
                         break;
-                    case ADD:
+                    case ADD:   // This is where we add vehicles to the db and store the current added date to later use to check for a new day
                         if (mVehicleName.length() > 0) {
                             values.put(VehiclesContract.Columns.VEHICLE_NAME, mVehicleName.getText().toString());
                             values.put(VehiclesContract.Columns.VEHICLE_AVERAGE, mAverageDist.getText().toString());
                             values.put(VehiclesContract.Columns.VEHICLE_CURRENT, mCurrentDist.getText().toString());
                             contentResolver.insert(VehiclesContract.CONTENT_URI, values);
+//                            java.util.Date storedDay = new java.util.Date();
                         }
                         break;
                 }
@@ -122,6 +122,7 @@ public class FragmentAddEdit extends Fragment {
                         .replace(R.id.fragment_container, new FragmentMainActivity())
                         .commit();
 
+                // Fancy Toast message to show the user their vehicle was added. Also a form a spell/error checking for the user to use
                 Toast.makeText(getContext(), spinYear.getSelectedItem().toString() + " " +
                                 spinMake.getSelectedItem().toString() + " " +
                                 spinModel.getSelectedItem().toString() + " has been added",
@@ -142,6 +143,7 @@ public class FragmentAddEdit extends Fragment {
         spinMake.setAdapter(ar2);
         spinModel.setAdapter(ar3);
 
+            // Spinners (Drop down menus) that help sort our Makes and Models for the user because there is no such thing as a Chevrolet F-150
 
             spinYear.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
 
@@ -275,7 +277,7 @@ public class FragmentAddEdit extends Fragment {
                 @Override
                 public void onNothingSelected(AdapterView<?> parent) {
 
-                    //Dialog for missing info?
+                    // Could put dialog info here later that lets the user know they forgot a field
                 }
             });
 
@@ -348,7 +350,7 @@ public class FragmentAddEdit extends Fragment {
                 @Override
                 public void onNothingSelected(AdapterView<?> parent) {
 
-                    //Dialog for missing info?
+                    // Could put dialog info here later that lets the user know they forgot a field
                 }
             });
 

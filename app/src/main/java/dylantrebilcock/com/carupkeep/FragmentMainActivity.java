@@ -36,6 +36,7 @@ public class FragmentMainActivity extends Fragment implements RecyclerViewAdapte
     Button addButton;
     EditText current_dist;
 
+    // A loader manager can handle multiple loaders, so it needs a way to identify this one
     public static final int LOADER_ID = 0;
 
     @Override
@@ -102,9 +103,9 @@ public class FragmentMainActivity extends Fragment implements RecyclerViewAdapte
         mAdapter.swapCursor(data);
         int count = mAdapter.getItemCount();
 
-        if(count > 2) {
+        if(count > 1) {
             addButton.setVisibility(View.GONE);
-            // Limits Vehicles to 3
+            // Limits Vehicle storage to 1(for date checking/mileage code restrictions)
         }
 
     }
@@ -115,14 +116,14 @@ public class FragmentMainActivity extends Fragment implements RecyclerViewAdapte
     }
 
 
-    private void AddEditRequest(Vehicle vehicle) {
+    private void AddEditRequest(Vehicle vehicle) {  // Opens FragmentAddEdit on button click
 
         getFragmentManager().beginTransaction().replace(R.id.fragment_container,
                 new FragmentAddEdit()).commit();
             }
 
     @Override
-    public void onEditClick(@NonNull Vehicle vehicle) {
+    public void onEditClick(@NonNull Vehicle vehicle) { // Opens FragmentAddEdit on button click of specific allowing the user to edit that certain vehicle
         RecyclerViewAdapter.OnVehicleClickListener listener = (RecyclerViewAdapter.OnVehicleClickListener) getActivity();
         if (listener != null) {
             listener.onEditClick(vehicle);
@@ -130,7 +131,7 @@ public class FragmentMainActivity extends Fragment implements RecyclerViewAdapte
     }
 
     @Override
-    public void onDeleteClick(@NonNull Vehicle vehicle) {
+    public void onDeleteClick(@NonNull Vehicle vehicle) {   // Deletes a vehicle when that certain vehicle's delete button (red x) is clicked
         RecyclerViewAdapter.OnVehicleClickListener listener = (RecyclerViewAdapter.OnVehicleClickListener) getActivity();
         if (listener != null) {
             listener.onDeleteClick(vehicle);

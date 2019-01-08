@@ -1,14 +1,9 @@
 package dylantrebilcock.com.carupkeep;
 
-import android.content.ContentResolver;
-import android.content.ContentValues;
-import android.database.Cursor;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-import java.time.LocalDate;
-import java.time.LocalTime;
 
 public class MaintenanceSchedule {
 
@@ -18,8 +13,7 @@ public class MaintenanceSchedule {
 
     private static int miles = Integer.parseInt(mCurrentDist.toString());
 
-    public static String makeMaintenance(Vehicle vehicle) {
-
+    public static String makeMaintenance(Vehicle vehicle) { // Sends vehicle to proper method that is holding Manufacturer specific maintenance schedules
 
         String make = spinMake.getSelectedItem().toString();
     switch (make) {
@@ -52,6 +46,8 @@ public class MaintenanceSchedule {
         }
         return make;
     }
+
+    //  Below are all the Make-specific maintenance schedules for the vehicles when they hit a certain mileage
 
     private static void acuraMaintenance() {
 
